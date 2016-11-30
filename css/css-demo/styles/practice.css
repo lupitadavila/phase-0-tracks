@@ -1,0 +1,22 @@
+#contact-info{
+	font-size: .8em;
+}
+
+.job{
+	background: #e9e5dc;
+	border-radius: 15px;
+	padding: 5px 15px 5px 15px;
+	margin-top: 20px;
+}
+.job:hover{
+	background: #99CCFF;
+	transition: all ease 1s;
+}
+
+.experience{
+	font-size: .8em;
+}
+
+.experience > li{
+	list-style-type: circle;
+}
