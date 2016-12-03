@@ -1,0 +1,24 @@
+#octopus{
+	position: relative;
+	width: auto;
+	max-width: 275px; /*width of largest image*/
+	margin: 20px auto; /*adding top+bottom margin and centering*/
+}
+
+
+#hat {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    z-index: 1;
+}
+#glasses {
+    position: absolute;
+    bottom: -225px;
+    right: 95px;
+    z-index: 1;
+}
+#body {
+    position: absolute;
+    top: 65px;
+}
