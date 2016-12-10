@@ -15,21 +15,28 @@ health_insurance = gets.chomp
 
 ### Detection Logic
 
-# Check age from year given
-year_check = Time.new.year-year.to_i
+year_check = Time.new.year-year.to_i # Check age from year given
 is_vampire = "" #initialize result variable
 
 #If the employee got their age right, and is willing to eat garlic bread or sign up for insurance
 if (year_check == age.to_i) && (garlic_bread == "y" || health_insurance == "y")
 	is_vampire = "Probably not a vampire."
-elsif (year_check != age.to_i) && (garlic_bread == "n" || health_insurance == "n")
+end
+#If the employee got their age wrong, and hates garlic bread or waives insurance
+if (year_check != age.to_i) && (garlic_bread == "n" || health_insurance == "n")
 	is_vampire = "Probably a vampire."
-elsif (year_check != age.to_i) && garlic_bread == "n" && health_insurance == "n"
+end
+#If the employee got their age wrong, hates garlic bread, and doesn’t want insurance
+if (year_check != age.to_i) && garlic_bread == "n" && health_insurance == "n"
 	is_vampire = "Almost certainly a vampire."
-elsif user_name == "Drake Cula" || user_name == "Tu Fang"
+end
+#If the employee has the name of “Drake Cula” or “Tu Fang”
+if user_name == "Drake Cula" || user_name == "Tu Fang"
 	is_vampire = "Definitely a vampire."
-else
-	is_vampire = "Results inconclusive."
 end
 
-puts is_vampire
+if is_vampire == "" ## none of the previous conditions were met
+ 	is_vampire = "Results inconclusive."
+end
+
+puts "This is the final answer " + is_vampire
