@@ -19,6 +19,18 @@ while i < num_employees.to_i
 	puts "Would you like to enroll in the company's health insurance? (y or n)"
 	health_insurance = gets.chomp
 
+	puts "Do you have any allergies? Type 'done' when complete"
+	sunshine = false
+	allergy = ""
+	while allergy != "done"
+		allergy = gets.chomp
+		if allergy == "sunshine"
+			sunshine = true
+		end
+	end
+
+
+
 	### Detection Logic
 
 	year_check = Time.new.year-year.to_i # Check age from year given
@@ -43,6 +55,10 @@ while i < num_employees.to_i
 
 	if is_vampire == "" ## none of the previous conditions were met
 	 	is_vampire = "Results inconclusive."
+	end
+
+	if sunshine
+		is_vampire = "Probably a vampire."
 	end
 
 	puts user_name + " is: " + is_vampire
