@@ -65,3 +65,5 @@ while i < num_employees.to_i
 
 	i+=1 # loop to next 
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
