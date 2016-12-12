@@ -1,0 +1,11 @@
+4.2 Algorithms
+
+*Algorithim for using an elevator*
+Decide what floor you are traveling to and note what floor you are currently on.
+If floor you want is greater than floor you are on
+- Press the up button
+Otherwise if the floor you want is less than the floor you are on
+- Press the down button
+As soon as the elevator has arrived and the doors open
+- Enter the elevator
+- Enter the floor number you need
