@@ -1,0 +1,25 @@
+4.2 Algorithms
+
+*Algorithim for using an elevator*
+Decide what floor you are traveling to and note what floor you are currently on.
+If floor you want is greater than floor you are on
+- Press the up button
+Otherwise if the floor you want is less than the floor you are on
+- Press the down button
+As soon as the elevator has arrived and the doors open
+- Enter the elevator
+Scan through all floor numbers
+- If floor number is found, hit the button
+
+*Algorithm for lighting a candle*
+If the wick is long enough & there is enough wax left
+- grab lighter
+- turn on lighter
+- light wick on candle
+If the wick is not long enough to light & there is enough wax left
+- clean the candle
+- grab lighter
+- turn on lighter
+- light wick on candle
+Otherwise if there is not enough wax left
+- do not light the candle
