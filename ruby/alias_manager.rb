@@ -49,6 +49,9 @@ def name_swap(full_name)
 	swapped.join(' ')
 end
 
+# create_alias method
+# takes in name (string)
+# returns alias (string)
 def create_alias(name) #returns alias (string)
 	arr = name_swap(name).split('') #split the name into array of characters
 	new_alias =[] #initiate new array to store alias
@@ -77,5 +80,26 @@ def create_alias(name) #returns alias (string)
 	new_alias.join('')
 end
 
-# should be "Vussit Gimodoe"
-p create_alias("Felicia Torres")
+# testing should be "Vussit Gimodoe"
+# p create_alias("Felicia Torres")
+
+user_name = ""
+all_names ={}
+
+until user_name == "quit" #loop until user_name enters "quit"
+	puts "\nWhat is your name? Type Enter to quit"
+	user_name = gets.chomp
+	if user_name == "quit"
+		break # break loop if quit
+	end
+
+	#store name and alias in hash
+	all_names.store(user_name,create_alias(user_name)) 
+	# prints the alias
+	puts "Your alias is: " + create_alias(user_name) + "\n"
+end
+
+#Loop through each item in hash and print statement
+all_names.each do|original_name, alias_name|
+	puts original_name + " is also known as " + alias_name
+end
