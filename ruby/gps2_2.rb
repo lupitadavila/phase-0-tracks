@@ -1,3 +1,6 @@
+#GPS 2.2 - Ruby  
+#12/20/2016 9:00PM
+
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -27,7 +30,10 @@ def add(list, item, quantity)
 	list
 end
 
-add(groceries,"spinach",2)
+add(groceries,"Lemonade",2)
+add(groceries,"Tomatoes",3)
+add(groceries,"Onions",1)
+add(groceries,"Ice Cream",4)
 
 # Method to remove an item from the list
 # input: list, item
@@ -39,14 +45,33 @@ def remove(list,item)
 	list
 end
 
-p remove(groceries,"pizza")
+p remove(groceries,"Lemonade")
 
 # Method to update the quantity of an item
-# input:
-# steps:
-# output:
+# input: list , item, quantity
+# steps: Similar to our add method 
+# output:new list
+
+def update(list, item, quantity)
+	if list[item] 
+	list[item] = quantity
+	else
+		puts "Your item is not on the list"
+	end
+	list
+end
+
+update(groceries, "apples", 5)
+update(groceries, "Steak", 1)
 
 # Method to print a list and make it look pretty
-# input:
-# steps:
-# output:
+# input: list
+# steps: Iterate through each elemnent and print it out on a new line.
+# output: Item and quantity on each line
+
+def print_list(list)
+	list.each {|item, quantity| puts "#{item}: #{quantity}"}
+end
+
+#print_list(groceries)
+##
