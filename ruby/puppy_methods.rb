@@ -30,6 +30,24 @@ class Puppy
 
 end
 
+
+
+class Cat
+
+	def initialize
+		puts "Created new cat..."		
+	end
+
+	def sleep(hours)
+		puts "Slept #{hours} hours."
+	end
+
+	def mice_caught_today(num_mice)
+		puts "Cat caught #{num_mice} mice today!"
+	end
+
+end
+
 #initialize instance of Puppy
 skip = Puppy.new
 
@@ -38,3 +56,21 @@ skip.speak(3)
 skip.roll_over
 skip.dog_years(2)
 skip.stay(10)
+
+house = []
+new_cat = nil
+
+50.times do|cat|
+	#cat+=1
+	#cat = Cat.new
+	house[cat] = Cat.new
+end
+
+house.each do|cat|
+	cat.sleep(2)
+	cat.mice_caught_today(5)
+end
+
+p house
+#p house[0].sleep(2)
+#p house[0].mice_caught_today(2)
