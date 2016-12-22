@@ -24,6 +24,10 @@ class Puppy
   	puts "*stays for #{seconds} seconds*"
   end
 
+  def initialize
+	puts "Initializing new puppy instance..."
+  end
+
 end
 
 #initialize instance of Puppy
