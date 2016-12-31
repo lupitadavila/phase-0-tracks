@@ -54,8 +54,16 @@ end
 
 #p more_santas
 
-p more_santas["Sam"].celebrate_birthday
-p more_santas["Sam"].get_mad_at("Vixen")
-p more_santas["Sam"].gender = "Female"
-p more_santas["Sam"].age
-p more_santas["Sam"].ethnicity
+more_santas["Sam"].celebrate_birthday
+more_santas["Sam"].get_mad_at("Vixen")
+more_santas["Sam"].gender = "Female"
+more_santas["Sam"].age
+more_santas["Sam"].ethnicity
+
+#initialize for loop
+printed_santa = nil
+
+100.times do |i|
+	printed_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	puts "Santa #{i}: is #{printed_santa.age} years old and is #{printed_santa.ethnicity}"
+end
