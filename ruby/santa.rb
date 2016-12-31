@@ -1,8 +1,8 @@
 class Santa
 	#getter
-	attr_reader :age, :ethnicity
+	attr_reader :ethnicity
 	#setter
-	attr_accessor :gender
+	attr_accessor :gender, :age
 
 	def initialize(gender,ethnicity)
 		@gender = gender
@@ -65,5 +65,6 @@ printed_santa = nil
 
 100.times do |i|
 	printed_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
-	puts "Santa #{i}: is #{printed_santa.age} years old and is #{printed_santa.ethnicity}"
+	printed_santa.age = [*0..140].sample
+	puts "Santa #{i}: is #{printed_santa.age} years old and is #{printed_santa.ethnicity} and #{printed_santa.gender}"
 end
