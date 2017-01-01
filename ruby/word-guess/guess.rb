@@ -2,12 +2,13 @@
 
 class WordGuess
 	#getter
-	attr_reader :num_of_guesses, :board_array
-	#no setters
+	attr_reader :num_of_guesses, :board_array, :word_array, :is_over
+	#no attr_accessor for now
 
 	#### Method initialize word
 	# @word_array - word and sets it as array
 	# @board_array - initialzie empty board array the same length as word
+	# @guesses - array of guesses
 	# @num_of_guesses - total number of guesses set to 0 by default
 	# @is_over - true or false if game is over or not
 
@@ -15,6 +16,7 @@ class WordGuess
 
 		@word_array = word.split('')
 		@board_array = []
+		@guesses = []
 
 		#Set board
 		@word_array.length.times do
@@ -31,12 +33,13 @@ class WordGuess
 	#Returns true or false if letter is found
 	def guess_letter?(letter)
 
-		#Add 1 to the total number of guesses in game IF not already guessed (in the board array)
-		if @board_array.index(letter) == nil
+		#Add 1 to the total number of guesses in game IF not already guessed (in the guesses array)
+		if @guesses.index(letter) == nil
+			@guesses << letter
 			@num_of_guesses += 1
 		end
 
-		#If the letter exists (returns valid index)
+		#If the letter exists (aka returns valid index)
 		# 1. Loop through letters in word and compare to the guessed letter
 		# 2. If guessed letter = original letter in word, set board = to letter in that index
 		# 3. Return True
@@ -82,11 +85,14 @@ class WordGuess
 		end
 	end
 
+	#Method print_board
+	# Prints board with spaces in between each character
 	def print_board
 		@board_array.each do |char|
 			print "#{char} "
 		end
 		puts ""
+		@board_array
 	end
 
 end
