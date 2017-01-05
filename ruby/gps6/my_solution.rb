@@ -20,14 +20,14 @@ class VirusPredictor
 
   # Calling methods with instance variables
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths #(@population_density, @population, @state)
+    speed_of_spread #(@population_density, @state)
   end
 
   private
 
   # Calculating each private input of the predicted deaths
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths #(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -46,7 +46,7 @@ class VirusPredictor
   end
 
   # Calculates speed of spread of disease based on private information
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
