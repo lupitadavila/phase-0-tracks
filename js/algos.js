@@ -4,6 +4,7 @@ phrases and returns the longest word or phrase
 - for every item in array, check if array[i] > array[i+1], if yes flip them
 - else move to next item in array and repeat question
 - End loop once all items are swapped
+- return last item in array
 
 */
 
@@ -23,7 +24,7 @@ function findLongest(phrasesArray){
 		}
 	}while(isSwapped)
 
-	return phrasesArray;
+	return phrasesArray[phrasesArray.length-1];
 }
 
 var example = ["Wow, I cannot believe this is the longest phrase.","long phrase","longest phrase","longer phrase"];
