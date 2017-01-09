@@ -27,6 +27,35 @@ function findLongest(phrasesArray){
 	return phrasesArray[phrasesArray.length-1];
 }
 
-var example = ["Wow, I cannot believe this is the longest phrase.","long phrase","longest phrase","longer phrase"];
+/*
+Function that takes two objects and checks if objects share at least one
+key-value pair
+- loop through both objects
+- for each key if key is the same, compare values
+- if values are also the same, return true
+- else return false and return to loop
 
+*/
+
+function findMatch(obj1,obj2){
+	var answer;
+	for (var key in obj1) {
+		if (obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)) {
+	        if(obj1[key] == obj2[key]){
+	        	answer = true;
+	        }else{
+	        	answer = false;
+	        }
+	    }
+	}
+	return answer;
+}
+
+//DRIVER CODE
+var example = ["Wow, I cannot believe this is the longest phrase.","long phrase","longest phrase","longer phrase"];
 console.log(findLongest(example));
+
+var student1 = {name: "Bob", age: 54};
+var student2 = {name: "Tamir", age: 54};
+console.log(findMatch(student1,student2));
+
