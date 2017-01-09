@@ -51,11 +51,54 @@ function findMatch(obj1,obj2){
 	return answer;
 }
 
+/*
+Function takes integer n for length, returns array
+of n random strings(with length 1-10 letters).
+- Initiate empty array
+- Run a while loop of i < n
+- Generate random string
+- Add string to array
+- Increment i
+*/
+
+function randomData(n){
+	var i = 0;
+	var data = [];
+	var chars = "abcdefghijklmnopqrstuvwxyz";
+	var randomString;
+
+	while(i < n){
+		randomString ="";
+		for (var j = Math.floor(Math.random() * 10) + 1; j > 0; --j){
+			randomString += chars[Math.floor(Math.random() * chars.length)]
+		}
+		data[i] = randomString;
+		i++;
+	}
+	return data;
+}
+
+
 //DRIVER CODE
 var example = ["Wow, I cannot believe this is the longest phrase.","long phrase","longest phrase","longer phrase"];
 console.log(findLongest(example));
 
-var student1 = {name: "Bob", age: 54};
+var student1 = {name: "Steven", age: 54};
 var student2 = {name: "Tamir", age: 54};
 console.log(findMatch(student1,student2));
+var student3 = {name: "Stacy", age: 14};
+console.log(findMatch(student1,student3));
 
+//console.log(randomData(4));
+
+// Generate array 10 times and find longest string in each(print)
+console.log("STARTING RELEASE 2 DRIVER CODE:             ")
+var generatedArray;
+for(var i=0;i<10;i++){
+	generatedArray = [];
+	generatedArray= randomData(8);
+	console.log("-----------------------------")
+	console.log("Array " +(i+1) + " = ");
+	console.log(generatedArray);
+	console.log("Longest word = " + findLongest(generatedArray));
+}
