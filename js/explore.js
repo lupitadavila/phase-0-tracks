@@ -13,4 +13,14 @@
 	return newStr;
  }
 
+// DRIVER CODE
 console.log(reverse("hello"));
+
+// Call function and store result in variable
+console.log("We will be reversing the following string: 'lupita' and then storing in variable name");
+var name = reverse("lupita");
+
+// Print variable if condition is true
+if(name.length>1){
+	console.log("var name = " + name);
+}
