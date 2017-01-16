@@ -1,0 +1,30 @@
+
+1.) Joining three tables
+
+SELECT * FROM users JOIN reviews ON users.id=reviews.user_id JOIN businesses ON reviews.business_id=businesses.id;
+
+Output:
+1|Bradford|Pit|1|5|Great customer service|1|1|1|Grundy Hollow Wedding Chapel
+2|Mandy|Kaling|2|3|The chapel was too small but great staff|1|2|1|Grundy Hollow Wedding Chapel
+3|Angela|Jolie|3|4|They have nice songs|3|3|3|The Beagle Nightclub
+2|Mandy|Kaling|4|1|They charged too much!|2|2|2|Amir's Towing
+sqlite>
+
+2.)  Just view the user's names, the business name, the star rating, and the comment.
+
+SELECT users.first_name || ' ' || users.last_name, businesses.name, reviews.stars, reviews.comment FROM users JOIN reviews ON users.id=reviews.user_id JOIN businesses ON reviews.business_id=businesses.id;
+
+Output:
+Bradford Pit|Grundy Hollow Wedding Chapel|5|Great customer service
+Mandy Kaling|Grundy Hollow Wedding Chapel|3|The chapel was too small but great staff
+Angela Jolie|The Beagle Nightclub|4|They have nice songs
+Mandy Kaling|Amir's Towing|1|They charged too much!
+
+
+3.) Select specific business
+
+SELECT * FROM users JOIN reviews ON users.id=reviews.user_id JOIN businesses ON reviews.business_id=businesses.id WHERE businesses.name="The Beagle Nightclub";
+
+Output:
+3|Angela|Jolie|3|4|They have nice songs|3|3|3|The Beagle Nightclub
+sqlite>
