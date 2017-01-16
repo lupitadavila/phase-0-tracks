@@ -1,0 +1,56 @@
+1.)
+SELECT * FROM roommate;
+
+Output:
+1|Lupita|true|2015|1
+2|Enrique|false|2014|1
+3|Min|true|2012|3
+4|Jenny|false|2013|2
+
+2.)
+UPDATE roommate SET pets="false" WHERE name="Min";
+
+3.)
+SELECT * FROM roommate, apartment WHERE roommate.apt_id=apartment.id;
+
+Output:
+
+1|Lupita|true|2015|1|1|204
+2|Enrique|false|2014|1|1|204
+3|Min|false|2012|3|3|206
+4|Jenny|false|2013|2|2|205
+
+4.)
+SELECT roommate.name,roommate.lease_year, apartment.number FROM roommate, apartment WHERE roommate.apt_id=apartment.id;
+
+Output:
+
+Lupita|2015|204
+Enrique|2014|204
+Min|2012|206
+Jenny|2013|205
+
+5.) DELETE FROM roommate WHERE name="Jenny";
+
+
+JOIN COMMANDS:
+SQL types ==> Inner, Left, Right, Full
+1.) 
+
+SELECT roommate.name,roommate.lease_year, apartment.number FROM roommate INNER JOIN apartment ON roommate.apt_id=apartment.id;
+
+Output:
+
+Lupita|2015|204
+Enrique|2014|204
+Min|2012|206
+
+
+SELECT roommate.name,roommate.lease_year, apartment.number FROM roommate LEFT JOIN apartment ON roommate.apt_id=apartment.id;
+
+Output:
+
+Lupita|2015|204
+Enrique|2014|204
+Min|2012|206
+
