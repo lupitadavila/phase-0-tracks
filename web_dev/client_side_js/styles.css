@@ -1,0 +1,13 @@
+body{
+	background: #d4d4d4;
+	color: #333;
+	font-family: "Times New Roman", serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+	text-transform: uppercase;
+}
+
+ul#animals > li:hover{
+	color: blue;
+}
