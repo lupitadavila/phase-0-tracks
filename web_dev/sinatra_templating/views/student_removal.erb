@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove a Student</title>
+</head>
+<body>
+  <h1>Remove a Student</h1>
+  <form action="/remove" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <button type="submit">Remove</button>
+  </form>
+  <h2>Available Students</h2>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= student['name'] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
