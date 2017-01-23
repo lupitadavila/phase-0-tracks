@@ -13,3 +13,11 @@ A JavaScript library that simplifies JavaScript
 * https://jquery.com/
 * http://www.w3schools.com/jquery/
 * https://oscarotero.com/jquery/
+
+## Online jQuery classes
+* https://www.codecademy.com/learn/jquery
+* http://try.jquery.com/
+
+## Best methods
+
+I enjoyed the try.jquery.com page because of the informative videos. I also enjoyed just going into the console and testing out jquery on an existing web page.
